@@ -1,0 +1,40 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+.nav {
+  display: flex;
+  justify-content: space-between;
+}
+
+.nav-link-left {
+  display: flex;
+}
+
+.right-items ul {
+  display: flex;
+}
+
+.right-items li {
+  margin: 5px;
+  list-style-type: none;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.nav-link-right {
+    margin: 10px;
+}
+
+.login {
+    margin: 10px;
+}
+
+.signup {
+    margin: 10px;
+}

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=\, initial-scale=1.0" />
+    <link rel="stylesheet" href="/static/styles.css" />
+    <title>Flask | App</title>
+  </head>
+  <body>
+    <div class="nav">
+      <div class="nav-link-left">
+        <div class="logo-item">
+          <h2><strong>Logo</strong></h2>
+        </div>
+        <div class="right-items">
+          <ul>
+            <li><h4>Home</h4></li>
+            <li><h4>Contacts</h4></li>
+            <li><h4>Products</h4></li>
+          </ul>
+        </div>
+      </div>
+      <div class="nav-links-right">
+        <button class="signup">Sign up</button>
+        <button class="login">Log in</button>
+      </div>
+    </div>
+
+    <div class="card">
+      {% for data in my_data:%}
+      <div class="card-title">
+        <h1>{{data["title"]}}</h1>
+      </div>
+      <div class="card-subtitle">
+        <h3>{{ data["subtitle"] }}</h3>
+      </div>
+      <div class="card-body">
+        <p><a href="{{url_for('get_blog', pid=data['id'])}}">Read more</a></p>
+      </div>
+      {% endfor %}
+    </div>
+  </body>
+</html>
